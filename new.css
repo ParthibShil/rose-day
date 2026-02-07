@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Varela Round", "Quicksand", sans-serif;
+  background: url(background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center;
+}
+
+.postcard {
+  /* responsive width: cap at 800px but shrink on small screens */
+  width: min(800px, 95%);
+  height: auto; /* let content determine height on small screens */
+  background: rgba(255, 255, 255, 0.101);
+  margin: 0 auto;
+  border-radius: 2%;
+  display: flex;
+  flex-wrap: wrap; /* allow children to stack when space is tight */
+  justify-content: space-between;
+  padding: 2.5rem;
+  box-shadow: 0.8em 0.8em 15px rgba(0, 0, 0, 0.3);
+  -ms-transform: rotate(2.5deg); /* IE 9 */
+  -webkit-transform: rotate(2.5deg); /* Chrome, Safari, Opera */
+  transform: rotate(2.5deg);
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.postcard1 {
+  width: 800px;
+  height: 500px;
+  background: #f594b862;
+  position: absolute;
+  left: 24%;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  z-index: -1;
+  margin: 0 auto;
+  border-radius: 2%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3em;
+  box-shadow: 0.8em 0.8em 15px rgba(0, 0, 0, 0.3);
+  -ms-transform: rotate(2.5deg); /* IE 9 */
+  -webkit-transform: rotate(2.5deg); /* Chrome, Safari, Opera */
+  transform: rotate(2.5deg);
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+h1 {
+  text-align: center;
+  /* responsive headline size */
+  font-size: clamp(1.2rem, 4vw, 4.5rem);
+  color: #fdfdfd;
+  margin-bottom: 0.3rem;
+}
+
+/*animation*/
+.postcard:hover,
+.postcard:active,
+.postcard:focus {
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.mail_stamp {
+  width: 100px;
+  float: right;
+}
+
+.push {
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+}
+
+/*footer*/
+footer {
+  margin: 2em auto;
+  text-align: center;
+  font-family: "Varela Round", "Quicksand", sans-serif;
+  color: white;
+}
+
+footer p {
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+p span {
+  font-size: 30px;
+  font-weight: 600;
+  text-shadow: 0 0 20px rgb(255, 255, 255);
+  color: #800020;
+}
+.p, p {
+  /* responsive body copy */
+  font-size: clamp(14px, 2.5vw, 22px);
+  font-family: cursive;
+  font-weight: 540;
+}
+.sender {
+  font-size: clamp(16px, 2.5vw, 25px);
+  text-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+/* images and stamps scale down on small screens */
+.mail_stamp,
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .postcard,
+  .postcard1 {
+    width: 95%;
+    height: auto;
+    padding: 2em;
+    flex-direction: column;
+    left: 2.5%;
+    transform: none;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+  .mail_stamp {
+    width: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .postcard,
+  .postcard1 {
+    width: 98%;
+    padding: 1.5em;
+    left: 1%;
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  .mail_stamp {
+    width: 60px;
+  }
+  .wrap {
+    width: 100%;
+    padding: 0.5em;
+    transform: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .text {
+    font-size: 16px;
+    margin-left: 0;
+  }
+  footer {
+    font-size: 1em;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .postcard,
+  .postcard1 {
+    width: 100%;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: none;
+    left: 0;
+  }
+  h1 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  .mail_stamp {
+    width: 45px;
+  }
+  .wrap {
+    padding: 0.2em;
+  }
+  .text {
+    font-size: 13px;
+  }
+  footer {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 350px) {
+  h1 {
+    font-size: 1em;
+  }
+  .text {
+    font-size: 11px;
+  }
+  .mail_stamp {
+    width: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .postcard,
+  .postcard1 {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 1em;
+    left: 0;
+    transform: none;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  .mail_stamp {
+    width: 40px;
+  }
+  .wrap {
+    width: 100%;
+    height: auto;
+    padding: 0.5em;
+    transform: none;
+    align-items: center;
+    justify-content: center;
+  }
+  footer {
+    font-size: 0.8em;
+    text-align: center;
+  }
+  .text {
+    font-size: 12px;
+    margin-left: 0;
+  }
+}
+
